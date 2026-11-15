@@ -1,0 +1,119 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BJM Hall//Events 2026-2027//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BJM Hall Events 2026-2027
+X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2026-12-06-christmas-potluck@bjmhall.org
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Christmas Potluck
+DESCRIPTION:Bring a dish to share and celebrate! Santa is coming to give pr
+ esents to kids! Times to be announced. More info: https://bjmhall.org
+LOCATION:BJM Hall\, 21160 Ocean View Dr\, Hayward\, CA 94541
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-31-new-years-eve-dinner-and-dance@bjmhall.org
+DTSTAMP:20261115T000000Z
+DTSTART;TZID=America/Los_Angeles:20261231T180000
+DTEND;TZID=America/Los_Angeles:20270101T010000
+SUMMARY:New Year's Eve Dinner & Dance
+DESCRIPTION:$70 per person. 6:00 PM hors d'oeuvres\, 7:00 PM dinner\, 9:00 
+ PM-1:00 AM music by Gilberto Amaral.\nMenu: signature charcuterie table\, 
+ vegetable soup\, steak & shrimp with sides\, dessert\, wine\, champagne to
+ ast at midnight\, chicken soup (canja).\nTo reserve call Elizabeth Smith 5
+ 10-566-2313. https://bjmhall.org
+LOCATION:BJM Hall\, 21160 Ocean View Dr\, Hayward\, CA 94541
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-10-three-kings-day-potluck@bjmhall.org
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+SUMMARY:Three Kings Day Potluck
+DESCRIPTION:Food\, singing and playing cards. Times to be announced. More i
+ nfo: https://bjmhall.org
+LOCATION:BJM Hall\, 21160 Ocean View Dr\, Hayward\, CA 94541
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-13-valentines-day-dinner-and-dance@bjmhall.org
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270213
+DTEND;VALUE=DATE:20270214
+SUMMARY:Valentine's Day Dinner & Dance
+DESCRIPTION:$40 per adult\, $10 per kid 12 & under. Tri-Tip Dinner. Times t
+ o be announced. More info: https://bjmhall.org
+LOCATION:BJM Hall\, 21160 Ocean View Dr\, Hayward\, CA 94541
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-15-festa-nossa-senhora-de-fátima@bjmhall.org
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270515
+DTEND;VALUE=DATE:20270517
+SUMMARY:Festa Nossa Senhora de Fátima
+DESCRIPTION:Music\, food\, drinks\, dancing and Kids Zone! Candlelight proc
+ ession in honor of Nossa Senhora. Times to be announced. More info: https:
+ //bjmhall.org
+LOCATION:BJM Hall\, 21160 Ocean View Dr\, Hayward\, CA 94541
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-08-14-festa-nossa-senhora-do-monte@bjmhall.org
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270814
+DTEND;VALUE=DATE:20270816
+SUMMARY:Festa Nossa Senhora do Monte
+DESCRIPTION:Music\, food\, drinks\, dancing and Kids Zone! Espetada\, Bifan
+ a\, Prego\, Tremoços\, Sumol. Times to be announced. More info: https://b
+ jmhall.org
+LOCATION:BJM Hall\, 21160 Ocean View Dr\, Hayward\, CA 94541
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-09-04-festa-do-senhor-bom-jesus@bjmhall.org
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270904
+DTEND;VALUE=DATE:20270906
+SUMMARY:Festa do Senhor Bom Jesus
+DESCRIPTION:Music\, food\, drinks\, dancing and Kids Zone! Espetada\, Bifan
+ a\, Prego\, Tremoços\, Sumol. Times to be announced. More info: https://b
+ jmhall.org
+LOCATION:BJM Hall\, 21160 Ocean View Dr\, Hayward\, CA 94541
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-09-18-festa-nossa-senhora-do-loreto@bjmhall.org
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270918
+DTEND;VALUE=DATE:20270920
+SUMMARY:Festa Nossa Senhora do Loreto
+DESCRIPTION:Music\, food\, drinks\, dancing and Kids Zone! Espetada\, Bifan
+ a\, Prego\, Tremoços\, Sumol. Times to be announced. More info: https://b
+ jmhall.org
+LOCATION:BJM Hall\, 21160 Ocean View Dr\, Hayward\, CA 94541
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

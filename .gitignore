@@ -1,0 +1,11 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+# Review screenshots stay local (not part of the website)
+screenshots/
+# Local tooling
+__pycache__/
+*.zip
