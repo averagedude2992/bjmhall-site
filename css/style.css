@@ -126,6 +126,34 @@ section{padding:1.8rem 0}
 .tl-year{display:block;font-weight:800;font-size:1.25rem;color:var(--red-dark)}
 .roots-invite{background:#FFF3C4;border-left:6px solid var(--gold);border-radius:10px;padding:.9rem 1rem}
 
+/* ---------- Hall Details: rates, payment, booking ---------- */
+.rates-card{margin-bottom:1.2rem}
+.rate-list{list-style:none;margin:0 0 1rem;padding:0;display:grid;gap:.7rem}
+.rate-list li{background:var(--cream);border:2px solid #efe4c4;border-radius:12px;padding:.9rem 1rem;text-align:center;min-width:0;display:flex;flex-direction:column}
+.rate-when{font-weight:800;font-size:1.15rem;color:var(--green-dark);margin:0 0 .15rem}
+.rate-alt{font-size:.95rem;color:var(--muted);margin:0 0 .4rem}
+.rate-price{font-family:Georgia,"Times New Roman",serif;font-size:2rem;font-weight:700;color:var(--red-dark);margin-top:auto;margin-bottom:0;white-space:nowrap;line-height:1.1}
+.rate-deposit{font-size:1.15rem;margin:0 0 .35rem}
+.rate-alt-inline{display:block;font-size:.95rem;font-weight:400;color:var(--muted);margin-top:.15rem}
+.rate-balance{margin:0;font-size:1.1rem}
+.rental-info{display:grid;grid-template-columns:1fr;gap:1.2rem;margin:0 0 1.2rem}
+.pay-list{list-style:none;margin:0;padding:0;display:grid;gap:.2rem}
+.pay-list li{padding:.75rem 0;border-bottom:2px solid #efe4c4;min-width:0}
+.pay-list li:last-child{border-bottom:0;padding-bottom:0}
+.pay-list li:first-child{padding-top:0}
+.pay-list strong{display:inline;font-size:1.15rem;color:var(--green-dark)}
+.pay-free{font-weight:700;color:var(--green)}
+.pay-note{margin:.15rem 0 0;color:var(--muted);font-size:1rem}
+.pay-soon{font-weight:700;color:#4a3b00}
+.booking-steps{list-style:none;margin:0 0 1.2rem;padding:0;display:grid;gap:.7rem;counter-reset:step}
+.booking-steps li{position:relative;padding:.75rem .8rem .75rem 3.6rem;background:var(--cream);border-radius:12px;font-size:1.1rem;min-height:56px;display:flex;align-items:center}
+.booking-steps li::before{counter-increment:step;content:counter(step);position:absolute;left:.5rem;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;font-size:1.2rem;display:flex;align-items:center;justify-content:center;line-height:1;font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.details-tbd{display:grid;grid-template-columns:1fr;gap:1.2rem}
+
+/* Keep language subtitles under h3s so they don't wrap into the title in two-col cards */
+h3 .h2-alt{display:block;margin-left:0;margin-top:.15rem}
+
+
 /* ---------- Layout grids (single column on phones) ---------- */
 .two-col,.heritage,.footer-grid{display:grid;grid-template-columns:1fr;gap:1.2rem}
 .type-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
@@ -211,6 +239,9 @@ section{padding:1.8rem 0}
   section{padding:2.6rem 0}
   .type-grid{grid-template-columns:repeat(3,1fr);gap:1rem}
   .heritage,.footer-grid{grid-template-columns:repeat(3,1fr)}
+  .rate-list{grid-template-columns:1fr 1fr}
+  .rental-info{grid-template-columns:1fr 1fr;align-items:start}
+  .details-tbd{grid-template-columns:1fr 1fr}
   .cal-button{display:none}
   .calendar-embed{display:flex}
   .event-date{flex-basis:100px}
