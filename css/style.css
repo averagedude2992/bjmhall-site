@@ -116,6 +116,16 @@ section{padding:1.8rem 0}
 .featured-schedule{list-style:none;padding:0}
 .featured-reserve{margin:1rem 0 .8rem;font-size:1.1rem}
 
+/* Our Roots + timeline */
+.roots{display:grid;gap:1.2rem}
+.roots-img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow);aspect-ratio:3/2;object-fit:cover}
+.roots-text p{font-size:1.1rem}
+.timeline{list-style:none;margin:0 0 1.2rem;padding:0;border-left:5px solid var(--gold);display:grid;gap:.9rem}
+.timeline li{position:relative;padding-left:1.1rem;font-size:1.1rem}
+.timeline li::before{content:"";position:absolute;left:-12px;top:.35rem;width:19px;height:19px;border-radius:50%;background:var(--green);border:3px solid #fff;box-shadow:0 0 0 2px var(--green)}
+.tl-year{display:block;font-weight:800;font-size:1.25rem;color:var(--red-dark)}
+.roots-invite{background:#FFF3C4;border-left:6px solid var(--gold);border-radius:10px;padding:.9rem 1rem}
+
 /* ---------- Layout grids (single column on phones) ---------- */
 .two-col,.heritage,.footer-grid{display:grid;grid-template-columns:1fr;gap:1.2rem}
 .type-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
@@ -207,6 +217,7 @@ section{padding:1.8rem 0}
   .event-date .day{font-size:2.2rem}
   .event-date .day-range{font-size:1.5rem}
   .event-actions{display:flex;flex-wrap:wrap;gap:1rem}
+  .roots{grid-template-columns:2fr 3fr;align-items:start;gap:2rem}
   .featured-event:has(.featured-img){display:grid;grid-template-columns:minmax(260px,40%) 1fr}
   .featured-event:has(.featured-img) .featured-tag{grid-column:1/-1}
   .map-embed iframe{height:420px}
