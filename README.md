@@ -42,7 +42,7 @@ Responses are saved to Excel and can email the hall inbox.
 ### Form 1: "Stay connected with BJM Hall" (Join / updates + volunteer)
 Used on the home page (Get Event Alerts) and on `join/index.html` (QR code page).
 
-Title: **Stay connected with BJM Hall** · Subtitle: *Bem-vindos! ¡Bienvenidos! Get news about our Portuguese events, and lend a hand if you can.*
+Title: **Stay connected with BJM Hall** · Subtitle: *Bem-vindos! Get news about our Portuguese events, and lend a hand if you can.*
 
 | # | Question | Type | Required |
 |---|---|---|---|
@@ -65,7 +65,7 @@ Used on `rent.html`.
 | 1 | Your name | Text | Yes |
 | 2 | Phone | Text | Yes |
 | 3 | Email | Text | Yes |
-| 4 | Type of event | Choice: Wedding / Boda, Birthday / Cumpleaños, Quinceañera, Baptism / Bautizo, Church service / Servicio religioso, Anniversary / Aniversario, Other / Otro | Yes |
+| 4 | Type of event | Choice: Wedding, Birthday, Quinceañera, Baptism, Church service, Anniversary, Other | Yes |
 | 5 | Event date | Date | Yes |
 | 6 | Second-choice date (optional) | Date | No |
 | 7 | Number of guests | Text (Restrictions: Number) | Yes |
