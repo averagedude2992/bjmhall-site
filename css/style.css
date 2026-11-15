@@ -133,6 +133,7 @@ section{padding:1.8rem 0}
 .rate-when{font-weight:800;font-size:1.15rem;color:var(--green-dark);margin:0 0 .15rem}
 .rate-alt{font-size:.95rem;color:var(--muted);margin:0 0 .4rem}
 .rate-price{font-family:Georgia,"Times New Roman",serif;font-size:2rem;font-weight:700;color:var(--red-dark);margin-top:auto;margin-bottom:0;white-space:nowrap;line-height:1.1}
+.rate-split{font-size:.95rem;color:var(--muted);margin:.4rem 0 0;line-height:1.35;font-weight:400}
 .rate-deposit{font-size:1.15rem;margin:0 0 .35rem}
 .rate-alt-inline{display:block;font-size:.95rem;font-weight:400;color:var(--muted);margin-top:.15rem}
 .rate-balance{margin:0;font-size:1.1rem}
