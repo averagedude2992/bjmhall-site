@@ -205,6 +205,47 @@ h3 .h2-alt{display:block;margin-left:0;margin-top:.15rem}
 .join-more{display:grid;gap:.6rem;margin-top:1.6rem}
 .join-foot{text-align:center;font-size:1rem;color:var(--muted);margin-top:1.2rem}
 
+/* ---------- Rent page: busy/free availability calendar ---------- */
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.avail-card{margin-top:.4rem}
+.avail-nav{display:flex;align-items:stretch;gap:.45rem;margin:0 0 1rem}
+.avail-nav .btn{flex:0 0 auto;width:auto;min-width:var(--tap);padding:.45rem .7rem;font-size:1rem}
+.avail-nav .btn[disabled]{opacity:.45;cursor:not-allowed}
+.avail-month{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--green-dark);line-height:1.2;min-width:0;padding:.2rem}
+.avail-month strong{font-family:Georgia,"Times New Roman",serif;font-size:1.2rem}
+.avail-month span{display:block;font-size:.95rem;font-weight:600;color:var(--muted)}
+.avail-grid{width:100%;border-collapse:collapse;table-layout:fixed;background:var(--cream);border:2px solid #efe4c4;border-radius:12px;overflow:hidden}
+.avail-grid caption{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.avail-grid th{padding:.35rem 0;font-size:.75rem;line-height:1.15;color:var(--muted);font-weight:800;background:#fff;border-bottom:2px solid #efe4c4}
+.avail-grid th span{display:block}
+.avail-grid th span[lang="pt"]{font-weight:600;font-size:.7rem}
+.avail-grid th abbr{text-decoration:none}
+.avail-grid td{padding:0;height:52px;text-align:center;vertical-align:middle;border:1px solid #efe4c4}
+.avail-grid .avail-empty{background:#f7f1e2}
+.avail-day button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;width:100%;height:52px;margin:0;padding:0;border:0;background:transparent;color:inherit;font:inherit;font-weight:800;cursor:pointer;line-height:1}
+.avail-num{font-size:1rem}
+.avail-mark{font-size:.7rem;font-weight:800;line-height:1;margin-top:.05rem}
+.avail-day.is-open button{background:#fff;color:var(--green-dark)}
+.avail-day.is-booked button{background:var(--red);color:#fff}
+.avail-day.is-past button{opacity:.55}
+.avail-day.is-past.is-open button{background:#f3eee0;color:var(--muted);font-weight:700}
+.avail-day.is-today button{box-shadow:inset 0 0 0 3px var(--gold)}
+.avail-day.is-selected button{outline:4px solid var(--gold);outline-offset:-4px}
+.avail-day.is-booked.is-selected button{outline-color:#fff}
+.avail-legend{list-style:none;margin:.8rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem 1.1rem;font-weight:700;color:var(--ink)}
+.avail-swatch{display:inline-flex;align-items:center;justify-content:center;width:1.3rem;height:1.3rem;margin-right:.35rem;border-radius:4px;vertical-align:middle;font-size:.7rem;font-weight:800}
+.avail-swatch.is-booked{background:var(--red);color:#fff;border:2px solid var(--red-dark)}
+.avail-swatch.is-open{background:#fff;border:2px solid var(--green)}
+.avail-note{font-size:1rem;color:var(--muted);margin:1rem 0}
+.avail-phone{font-weight:800;white-space:nowrap}
+.avail-detail{margin-top:.9rem;background:var(--cream);border:2px solid #efe4c4;border-radius:12px;padding:.9rem 1rem;min-height:4.5rem}
+.avail-detail p{margin:0 0 .5rem}
+.avail-detail p:last-child{margin-bottom:0}
+.avail-detail-hint{color:var(--muted)}
+.avail-detail-booked{font-size:1.2rem;font-weight:800;color:var(--red-dark)}
+.avail-error{padding:.4rem 0}
+.avail-error p{margin:0 0 .7rem}
+
 /* =========== Larger phones / small tablets =========== */
 @media (min-width:480px){
   .gallery{grid-template-columns:1fr 1fr}
@@ -241,6 +282,8 @@ h3 .h2-alt{display:block;margin-left:0;margin-top:.15rem}
   .type-grid{grid-template-columns:repeat(3,1fr);gap:1rem}
   .heritage,.footer-grid{grid-template-columns:repeat(3,1fr)}
   .rate-list{grid-template-columns:1fr 1fr}
+  .avail-nav .btn{width:auto;min-width:var(--tap)}
+  .avail-grid td,.avail-day button{height:56px}
   .rental-info{grid-template-columns:1fr 1fr;align-items:start}
   .details-tbd{grid-template-columns:1fr 1fr}
   .cal-button{display:none}

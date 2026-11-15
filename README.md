@@ -8,12 +8,16 @@ Plain HTML + CSS + a tiny bit of JavaScript. No build step: upload the folder an
 | File | What it is |
 |---|---|
 | `index.html` | Home: welcome, events calendar, event-alert signup |
-| `rent.html` | Rent the Hall: event types, photos, hall details, map, rental request form |
+| `rent.html` | Rent the Hall: event types, photos, hall details, availability calendar, map, rental request form |
 | `events.ics` | 2026–2027 events as all-day calendar entries ("Add all events to my calendar" button) |
+| `data/busy-dates.json` | Booked dates for the Rent page calendar (YYYY-MM-DD only; no event details) |
+| `js/availability-calendar.js` | Month-view availability calendar on the Rent page |
+| `scripts/sync-busy-dates.py` | Downloads the published Outlook calendar and updates `data/busy-dates.json` |
+| `.github/workflows/sync-busy-dates.yml` | Runs the sync every 3 hours (and on demand) |
 | `CNAME` | `bjmhall.org` (used by GitHub Pages; harmless on Cloudflare) |
 | `_headers` | Cloudflare Pages: serves `events.ics` as a calendar download |
 | `join/index.html` | Mobile-first signup + volunteer page for the QR code (bjmhall.org/join) |
-| `css/style.css` | All styles, mobile-first (base = phones; `min-width` 480/768/960px enhance for larger screens). No JavaScript anywhere. |
+| `css/style.css` | All styles, mobile-first (base = phones; `min-width` 480/768/960px enhance for larger screens) |
 | `qr/` | QR code to bjmhall.org/join: plain PNG, printable letter-size PNG and PDF |
 | `images/` | Flags (SVG) and hall photos (`hall-NN-name.jpg`, resized to max 1600px) |
 
@@ -100,6 +104,23 @@ When an event passes, delete its `<li>`. When a new season's flyer comes out, up
 
 `qr/bjmhall-join-qr.png` points to **https://bjmhall.org/join** (high error correction, tested). Print `qr/bjmhall-join-qr-printable.pdf` (letter size) for raffle tables.
 It only works once the site is live on bjmhall.org.
+
+
+## Rent page availability calendar
+
+The Rent page (`rent.html`, section "Check Availability") shows a month view of booked and available dates. It does not show event names, times, or other details.
+
+A GitHub Action named **Sync busy dates** runs every 3 hours (and can be run by hand from the Actions tab). It downloads the hall's published Outlook calendar, writes booked dates to `data/busy-dates.json`, and commits only if the date list changed. The published calendar URL is stored as the repository secret `OUTLOOK_ICS_URL` (Settings → Secrets and variables → Actions), so it is not on the public website. The workflow requests `contents: write` so it can push that file when dates change.
+
+Events on the hall calendar are treated as booked even if Outlook marks them as free, because the hall is in use that day. Cancelled events are skipped. Dates shown as available on the website still need to be confirmed by phone.
+
+To refresh locally (from a checkout, with the calendar URL set in the environment):
+
+```
+pip install -r scripts/requirements.txt
+python scripts/sync-busy-dates.py
+python scripts/sync-busy-dates.py --self-test
+```
 
 ## Connect the Outlook calendar
 
