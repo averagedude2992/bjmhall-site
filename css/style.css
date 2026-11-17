@@ -164,11 +164,15 @@ h3 .h2-alt{display:block;margin-left:0;margin-top:.15rem}
 .type-grid strong{display:block;font-size:1.05rem;color:var(--green-dark)}
 .type-grid span.alt{display:block;color:var(--muted);font-size:.85rem}
 
-/* Gallery: 1 col phones, 2 cols 480px+, 3 cols desktop */
+/* Gallery: 1 col phones, 2 cols 480px+, 3 cols desktop.
+   The fly-through spans the full width at the top so the two bar photos sit side by side under it. */
 .gallery{display:grid;grid-template-columns:1fr;gap:.8rem}
 .gallery figure{margin:0;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
 .gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#e9e2cf}
+.gallery video{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#fff;vertical-align:middle}
+.gallery .gallery-video{grid-column:1/-1}
 .gallery figcaption{padding:.6rem .9rem;font-weight:700}
+.gallery figcaption [lang="pt"]{display:block;font-weight:400;color:var(--muted);font-size:.95rem;margin-top:.15rem}
 
 /* Map + form embeds */
 .map-embed{border:3px solid var(--green);border-radius:var(--radius);overflow:hidden;background:#fff}
