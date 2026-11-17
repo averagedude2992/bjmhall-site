@@ -29,7 +29,7 @@ Search the files for `[` and `PLACEHOLDER` / `PASTE_` / `EXAMPLE` / `TO CONFIRM`
 
 - Contact info is filled in: 21160 Ocean View Dr, Hayward, CA 94541 · (510) 581-4034 · bjmhall@outlook.com (tap-to-call, tap-to-email, tap-for-directions buttons).
 - **Home:** published Outlook calendar link (used twice: the phone "View full calendar" button and the tablet/desktop iframe); short hall history in "Our Roots"; the events flyer image (save as `images/bjm-events-flyer-2026-2027.jpg` and uncomment the "See the full flyer" button).
-- **Rent page:** capacity `[number]`, what's included. Rates are the full totals: Sunday–Friday $3,000 ($800 deposit + $2,200 due before the event); Saturday $3,500 ($800 deposit + $2,700 due before the event). Payment options and booking steps are filled in. Zelle is a placeholder until the hall's Zelle email or phone is added (search `ZELLE PLACEHOLDER` in `rent.html`).
+- **Rent page:** capacity `[number]`, what's included. Rates are the full totals: Sunday–Friday $3,500 ($800 deposit + $2,700 due before the event); Saturday $4,000 ($800 deposit + $3,200 due before the event). Payment options and booking steps are filled in. Zelle is a placeholder until the hall's Zelle email or phone is added (search `ZELLE PLACEHOLDER` in `rent.html`).
 - **Forms:** connected (Microsoft Forms, embedded + big full-screen button).
 
 ## Adding or changing photos
