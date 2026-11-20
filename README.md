@@ -7,8 +7,9 @@ Plain HTML + CSS + a tiny bit of JavaScript. No build step: upload the folder an
 
 | File | What it is |
 |---|---|
-| `index.html` | Home: welcome, events calendar, event-alert signup |
-| `rent.html` | Rent the Hall: event types, photos, hall details, availability calendar, map, rental request form |
+| `index.html` | Home: Rent the Hall (event types, photos, newly paved parking and ADA access, hall details, availability calendar, map, rental request form). Old `#events`, `#signup`, and `#roots` links open the events page. |
+| `events.html` | Portuguese community events: welcome, events calendar, event-alert signup |
+| `rent.html` | Redirect to the home page so older rental links keep working (`rent.html` and `rent.html#section`) |
 | `events.ics` | 2026–2027 events as all-day calendar entries ("Add all events to my calendar" button) |
 | `data/busy-dates.json` | Booked dates for the Rent page calendar (YYYY-MM-DD only; no event details) |
 | `js/availability-calendar.js` | Month-view availability calendar on the Rent page |
@@ -28,15 +29,15 @@ Preview locally: `python3 -m http.server 8000` in this folder, then open http://
 Search the files for `[` and `PLACEHOLDER` / `PASTE_` / `EXAMPLE` / `TO CONFIRM`:
 
 - Contact info is filled in: 21160 Ocean View Dr, Hayward, CA 94541 · (510) 581-4034 · bjmhall@outlook.com (tap-to-call, tap-to-email, tap-for-directions buttons).
-- **Home:** published Outlook calendar link (used twice: the phone "View full calendar" button and the tablet/desktop iframe); short hall history in "Our Roots"; the events flyer image (save as `images/bjm-events-flyer-2026-2027.jpg` and uncomment the "See the full flyer" button).
-- **Rent page:** capacity 250 guests, what's included. The $800 deposit is due when the date is confirmed. Rates are the full totals: Sunday–Friday $3,500 ($800 deposit + $2,700 due before the event); Saturday $4,000 ($800 deposit + $3,200 due before the event). Payment options and booking steps are filled in. Zelle is a placeholder until the hall's Zelle email or phone is added (search `ZELLE PLACEHOLDER` in `rent.html`).
+- **Events page (`events.html`):** published Outlook calendar link (used twice: the phone "View full calendar" button and the tablet/desktop iframe); short hall history in "Our Roots"; the events flyer image (save as `images/bjm-events-flyer-2026-2027.jpg` and uncomment the "See the full flyer" button).
+- **Rent page (home, `index.html`):** capacity 250 guests, what's included, newly paved parking, and ADA access. The $800 deposit is due when the date is confirmed. Rates are the full totals: Sunday–Friday $3,500 ($800 deposit + $2,700 due before the event); Saturday $4,000 ($800 deposit + $3,200 due before the event). Payment options and booking steps are filled in. Zelle is a placeholder until the hall's Zelle email or phone is added (search `ZELLE PLACEHOLDER` in `index.html`). `rent.html` only redirects here.
 - **Forms:** connected (Microsoft Forms, embedded + big full-screen button).
 
 ## Adding or changing photos
 
 1. Resize to about 1600px wide (keeps the site fast) and save as JPG in `images/`.
-2. In `rent.html`, inside `<div class="gallery">`, add or edit a `<figure>` (change `src`, `alt` description, and caption).
-3. Hero backgrounds: `hall-01-main-hall.jpg` (home) and `hall-12-stage.jpg` (rent page), set in the `style=` on each page's first `<section>`.
+2. In `index.html`, inside `<div class="gallery">`, add or edit a `<figure>` (change `src`, `alt` description, and caption).
+3. Hero backgrounds: `hall-12-stage.jpg` (home / Rent the Hall) and `hall-01-main-hall.jpg` (events page), set in the `style=` on each page's first `<section>`.
 
 ## FORMS-SETUP (Microsoft Forms, free with the hall's Microsoft 365 nonprofit account)
 
@@ -44,7 +45,7 @@ The site has no form code of its own. Both forms are Microsoft Forms embedded in
 Responses are saved to Excel and can email the hall inbox.
 
 ### Form 1: "Stay connected with BJM Hall" (Join / updates + volunteer)
-Used on the home page (Get Event Alerts) and on `join/index.html` (QR code page).
+Used on the events page (Get Event Alerts) and on `join/index.html` (QR code page).
 
 Title: **Stay connected with BJM Hall** · Subtitle: *Bem-vindos! Get news about our Portuguese events, and lend a hand if you can.*
 
@@ -62,7 +63,7 @@ Add to the description: "Please give a phone number or an email (or both). We on
 (Microsoft Forms can't require "one of two fields", so the description asks for it.)
 
 ### Form 2: "BJM Hall Rental Request"
-Used on `rent.html`.
+Used on the home page (`index.html`).
 
 | # | Question | Type | Required |
 |---|---|---|---|
@@ -89,14 +90,14 @@ Add to the description: "This is a request only. Your date is not reserved until
 4. In the page, uncomment the `<iframe ...>` line (remove `<!--` and `-->`), replace `PASTE_..._FORM_EMBED_URL_HERE` with that URL, and delete the yellow PLACEHOLDER note.
 
 Where to paste:
-- Join form → `index.html` (Get Event Alerts section) and `join/index.html`.
-- Rental form → `rent.html` (Request a Date section).
+- Join form → `events.html` (Get Event Alerts section) and `join/index.html`.
+- Rental form → `index.html` (Request a Date section).
 
 Texting subscribers needs a separate tool later (e.g. a group-text service or Square Marketing); the form just collects numbers and consent.
 
 ## Updating events
 
-Events are listed by hand in `index.html` (section `id="events"`: one `<article class="featured-event">` for the next big event, then one `<li class="event">` per event) and in `events.ics`.
+Events are listed by hand in `events.html` (section `id="events"`: one `<article class="featured-event">` for the next big event, then one `<li class="event">` per event) and in `events.ics`.
 The featured New Year's Eve card has a commented-out flyer image slot: save the flyer as `images/nye-2026-flyer.jpg` (about 800-1200px wide) and uncomment the `<img>`.
 When an event passes, delete its `<li>`. When a new season's flyer comes out, update both. Times are not shown until announced.
 
@@ -108,7 +109,7 @@ It only works once the site is live on bjmhall.org.
 
 ## Rent page availability calendar
 
-The Rent page (`rent.html`, section "Check Availability") shows a month view of booked and available dates. It does not show event names, times, or other details.
+The Rent page (home, `index.html`, section "Check Availability") shows a month view of booked and available dates. It does not show event names, times, or other details. `js/availability-calendar.js` loads `data/busy-dates.json` with a path relative to the page, which resolves from `/` and from `/index.html`.
 
 A GitHub Action named **Sync busy dates** runs every 3 hours (and can be run by hand from the Actions tab). It downloads the hall's published Outlook calendar, writes booked dates to `data/busy-dates.json`, and commits only if the date list changed. The published calendar URL is stored as the repository secret `OUTLOOK_ICS_URL` (Settings → Secrets and variables → Actions), so it is not on the public website. The workflow requests `contents: write` so it can push that file when dates change.
 
@@ -128,7 +129,7 @@ python scripts/sync-busy-dates.py --self-test
 2. Settings → Calendar → Shared calendars → **Publish a calendar**.
 3. Choose the calendar, permission **Can view all details** (or "titles and locations"), click **Publish**.
 4. Copy the **HTML** link.
-5. In `index.html`, put the HTML link in the **View full calendar** button (shown on phones, where an embedded calendar is too cramped), and replace the placeholder inside `<div class="calendar-embed" ...>` (shown on tablets/desktops) with:
+5. In `events.html`, put the HTML link in the **View full calendar** button (shown on phones, where an embedded calendar is too cramped), and replace the placeholder inside `<div class="calendar-embed" ...>` (shown on tablets/desktops) with:
    ```html
    <iframe src="PASTE_HTML_LINK_HERE" title="BJM Hall events calendar" loading="lazy"></iframe>
    ```
