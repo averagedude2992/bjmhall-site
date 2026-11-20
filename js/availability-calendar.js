@@ -1,5 +1,6 @@
-/* Month-view availability calendar for the Rent page.
-   Reads data/busy-dates.json (date list only). No event details. */
+/* Month-view availability calendar for the Rent the Hall home page.
+   Reads data/busy-dates.json relative to the page (works from / and /index.html).
+   Date list only. No event details. */
 (function () {
   "use strict";
 

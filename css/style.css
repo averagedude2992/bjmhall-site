@@ -33,7 +33,7 @@ code{overflow-wrap:anywhere}
 .brand-name{font-family:Georgia,serif;font-size:1.25rem;font-weight:700;line-height:1.05;white-space:nowrap}
 .brand-name small{display:block;font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:.7rem;font-weight:400;color:var(--muted)}
 .header-call{display:inline-flex;align-items:center;justify-content:center;gap:.3rem;min-height:48px;min-width:48px;padding:0 .9rem;border-radius:12px;background:var(--green);color:#fff;font-weight:800;font-size:1rem;text-decoration:none;flex-shrink:0}
-.main-nav ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1.35fr .9fr;gap:.35rem}
+.main-nav ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1.55fr .95fr .75fr;gap:.35rem}
 .main-nav a{display:flex;align-items:center;justify-content:center;text-align:center;min-height:52px;padding:.3rem .3rem;border-radius:12px;font-weight:800;font-size:.95rem;line-height:1.15;text-decoration:none;color:var(--green-dark);border:3px solid var(--green);background:#fff}
 .main-nav a[aria-current="page"]{background:var(--green);color:#fff}
 
@@ -164,6 +164,19 @@ h3 .h2-alt{display:block;margin-left:0;margin-top:.15rem}
 .type-grid strong{display:block;font-size:1.05rem;color:var(--green-dark)}
 .type-grid span.alt{display:block;color:var(--muted);font-size:.85rem}
 
+/* Newly paved grounds and ADA access, on the rental home page */
+.grounds-callout{background:#fff;border:4px solid var(--green);border-top:8px solid var(--gold);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.1rem 1.1rem 1.2rem}
+.grounds-tag{display:inline-block;background:var(--gold-light);color:#1a1a1a;font-weight:800;margin:0 0 .7rem;padding:.35rem .75rem;border-radius:999px;font-size:.95rem}
+.grounds-tag [lang="pt"]{display:block;font-weight:600;color:#3d3208}
+.grounds-list{list-style:none;margin:.2rem 0 0;padding:0;display:grid;gap:.8rem}
+.grounds-list li{display:flex;gap:.75rem;align-items:flex-start;background:var(--cream);border-radius:12px;padding:.95rem .9rem;border-left:6px solid var(--green);min-width:0}
+.grounds-list li:last-child{border-left-color:var(--red)}
+.grounds-icon{font-size:2rem;line-height:1;flex:0 0 auto}
+.grounds-list strong{display:block;font-size:1.2rem;color:var(--green-dark)}
+.grounds-pt{display:block;color:var(--muted);font-size:.95rem;margin:.1rem 0 .35rem}
+.grounds-list p{margin:0 0 .3rem;font-size:1.05rem}
+.grounds-list p:last-child{margin:0}
+
 /* Gallery: 1 col phones, 2 cols 480px+, 3 cols desktop.
    The fly-through spans the full width at the top so the two bar photos sit side by side under it. */
 .gallery{display:grid;grid-template-columns:1fr;gap:.8rem}
@@ -284,6 +297,8 @@ h3 .h2-alt{display:block;margin-left:0;margin-top:.15rem}
   .h2-alt{display:inline;margin-left:.5rem}
   section{padding:2.6rem 0}
   .type-grid{grid-template-columns:repeat(3,1fr);gap:1rem}
+  .grounds-list{grid-template-columns:1fr 1fr;gap:1rem}
+  .grounds-tag [lang="pt"]{display:inline;margin-left:.35rem}
   .heritage,.footer-grid{grid-template-columns:repeat(3,1fr)}
   .rate-list{grid-template-columns:1fr 1fr}
   .avail-nav .btn{width:auto;min-width:var(--tap)}
