@@ -131,6 +131,18 @@ section{padding:1.8rem 0}
 .history-figure a{display:block;color:inherit;text-decoration:none}
 .history-figure img{width:100%;height:auto;background:#f3eee0}
 .history-lead{grid-column:1 / -1;max-width:none;margin-top:0}
+.compare-frame{position:relative;width:100%;aspect-ratio:1200 / 1156;overflow:hidden;background:#f3eee0;touch-action:pan-y;cursor:ew-resize;user-select:none}
+.history-lead .compare-frame img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:fill;pointer-events:none;background:none}
+.compare-then{clip-path:inset(0 calc(100% - var(--pos, 50%)) 0 0)}
+.compare-label{position:absolute;top:.55rem;z-index:2;pointer-events:none;background:rgba(0,0,0,.62);color:#fff;font-size:.85rem;font-weight:800;line-height:1.2;padding:.28rem .5rem;border-radius:6px}
+.compare-label-then{left:.55rem}
+.compare-label-now{right:.55rem}
+.compare-handle{position:absolute;top:0;bottom:0;left:var(--pos, 50%);z-index:2;width:3px;transform:translateX(-50%);background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.4);pointer-events:none}
+.compare-handle::after{content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;transform:translate(-50%, -50%);border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23035A2F' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 7 L5 12 L9 17 M15 7 L19 12 L15 17'/%3E%3C/svg%3E") center / 24px 24px no-repeat;box-shadow:0 1px 6px rgba(0,0,0,.4)}
+.compare-frame:focus-within .compare-handle::after{outline:4px solid var(--gold);outline-offset:3px}
+.compare-range{position:absolute;z-index:3;left:0;top:50%;width:100%;height:44px;margin:0;transform:translateY(-50%);opacity:0;cursor:ew-resize;touch-action:pan-y}
+.compare-credit{margin:0;padding:0 .85rem .75rem;max-width:42rem;font-size:.85rem;font-weight:600;line-height:1.45;color:var(--muted)}
+.compare-credit a{display:inline;color:var(--green-dark);font-weight:700;text-decoration:underline}
 .history-clip{max-width:16.5rem}
 .history-figure figcaption{padding:.6rem .85rem .7rem;font-weight:700;font-size:.98rem;line-height:1.4}
 .history-figure figcaption [lang="pt"]{display:block;margin-top:.3rem;font-weight:600;color:var(--muted)}

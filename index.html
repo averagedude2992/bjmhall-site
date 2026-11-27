@@ -268,18 +268,24 @@
         <div class="roots-text">
           <p>For more than 100 years, the <strong lang="pt">Irmandade do Bom Jesus Milagroso</strong> has been a home on the hill for Madeiran Portuguese families in Hayward. It was built by people who worked hard, prayed together, and never missed a chance to celebrate.</p>
         </div>
-        <figure class="history-figure history-lead" id="aerial-1939">
-          <a href="images/history/1939-aerial-photo-key.webp">
-            <img src="images/history/1939-aerial-photo-key.webp" srcset="images/history/1939-aerial-photo-key-800.webp 800w, images/history/1939-aerial-photo-key.webp 1650w" sizes="(min-width: 768px) 1056px, 100vw" width="1650" height="1275" alt="1939 aerial photograph. The BJM Hall grounds are circled in red at Prospect Street, now Ocean View Drive, and Sycamore Street, now Ash Street. Red labels mark Ash (Sycamore), Foothill, Locust, Ocean View (Prospect), and Grove. Unpaved roads and orchards surround the grounds." loading="lazy" decoding="async">
-            <span class="visually-hidden">Opens full size.</span>
-          </a>
-          <figcaption>1939 aerial photograph. The BJM Hall grounds are circled in red, at Prospect Street (now Ocean View Drive) and Sycamore Street (now Ash Street). Note the unpaved roads and orchards all around. <span lang="pt">Fotografia aérea de 1939. O terreno do BJM Hall está assinalado a vermelho. Repare nas estradas de terra e nos pomares à volta.</span> <span class="history-zoom">Tap or click to open full size.</span></figcaption>
+        <figure class="history-figure history-lead" id="compare-1939">
+          <div class="compare-frame" style="--pos:50%">
+            <img class="compare-today" src="images/history/compare-today.webp" srcset="images/history/compare-today-800.webp 800w, images/history/compare-today.webp 1200w" sizes="(min-width: 768px) 1056px, 100vw" width="1200" height="1156" alt="Present-day aerial of the BJM Hall block. The hall and its parking lot sit between the streets on the top, left, and right." decoding="async">
+            <img class="compare-then" src="images/history/compare-1939.webp" srcset="images/history/compare-1939-800.webp 800w, images/history/compare-1939.webp 1200w" sizes="(min-width: 768px) 1056px, 100vw" width="1200" height="1156" alt="1939 aerial close-up of the same grounds. The roads are unpaved and an orchard stands next door." decoding="async">
+            <span class="compare-label compare-label-then">1939</span>
+            <span class="compare-label compare-label-now">Today / <span lang="pt">Hoje</span></span>
+            <span class="compare-handle" aria-hidden="true"></span>
+            <label class="visually-hidden" for="compare-range">Drag to compare the BJM Hall grounds in 1939 and today</label>
+            <input id="compare-range" class="compare-range" type="range" min="0" max="100" value="50" step="1">
+          </div>
+          <figcaption>Drag to compare the BJM Hall grounds in 1939 and today. In 1939 the roads around the hall were still unpaved, with orchards next door. <span lang="pt">Arraste para comparar o terreno do BJM Hall em 1939 e hoje. Em 1939 as estradas à volta ainda eram de terra, com pomares ao lado.</span></figcaption>
+          <p class="compare-credit">1939 photo courtesy of the <a href="https://www.haywardareahistory.org/" target="_blank" rel="noopener">Hayward Area Historical Society</a>. Present-day imagery © Google.</p>
         </figure>
         <div class="roots-history">
           <ol class="timeline">
             <li><span class="tl-year">1921</span> <p class="tl-prose">The Irmandade is founded.</p></li>
             <li><span class="tl-year">1922</span> <p class="tl-prose">Officially incorporated on March 31. The land for our hall is given for a $10 gold coin.</p></li>
-            <li><span class="tl-year">1939</span> <p class="tl-prose"><a href="#aerial-1939">See the 1939 aerial above.</a></p></li>
+            <li><span class="tl-year">1939</span> <p class="tl-prose"><a href="#compare-1939">See the 1939 and today comparison above.</a></p></li>
             <li>
               <span class="tl-year">1950s</span>
               <div class="tl-split">
@@ -354,4 +360,5 @@
     </div>
   </div>
 </footer>
+<script src="js/compare-slider.js"></script>
 </body></html>
