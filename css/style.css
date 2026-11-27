@@ -121,7 +121,22 @@ section{padding:1.8rem 0}
 .timeline li{position:relative;padding-left:1.1rem;font-size:1.1rem}
 .timeline li::before{content:"";position:absolute;left:-12px;top:.35rem;width:19px;height:19px;border-radius:50%;background:var(--green);border:3px solid #fff;box-shadow:0 0 0 2px var(--green)}
 .tl-year{display:block;font-weight:800;font-size:1.25rem;color:var(--red-dark)}
-.roots-invite{background:#FFF3C4;border-left:6px solid var(--gold);border-radius:10px;padding:.9rem 1rem}
+.tl-prose{margin:0;max-width:42rem}
+.tl-split{display:grid;gap:.85rem}
+.roots-invite{background:#FFF3C4;border-left:6px solid var(--gold);border-radius:10px;padding:.9rem 1rem;max-width:42rem}
+.roots-history > .btn{max-width:42rem}
+
+/* Archival photographs in Our Roots. The picture opens at full size. */
+.history-figure{margin:.85rem 0 0;max-width:100%;background:#fff;border:1px solid #efe4c4;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.history-figure a{display:block;color:inherit;text-decoration:none}
+.history-figure img{width:100%;height:auto;background:#f3eee0}
+.history-lead{max-width:40rem}
+.history-clip{max-width:16.5rem}
+.history-figure figcaption{padding:.6rem .85rem .7rem;font-weight:700;font-size:.98rem;line-height:1.4}
+.history-figure figcaption [lang="pt"]{font-weight:600}
+.history-zoom{display:block;margin-top:.2rem;font-weight:600;font-size:.85rem;color:var(--muted)}
+.history-credit{margin:1.15rem 0 0;max-width:42rem;font-size:.9rem;line-height:1.45;color:var(--muted)}
+.history-credit a{color:var(--green-dark);font-weight:700}
 
 /* Madeira's 11 municipalities, at the top of Our Roots. No motion. */
 .muni-flags{position:relative;margin:0 0 1.5rem;padding:.8rem .45rem 3.6rem;background:#fff;border-radius:var(--radius);border-top:6px solid var(--gold);box-shadow:var(--shadow)}
@@ -321,6 +336,10 @@ h3 .h2-alt{display:block;margin-left:0;margin-top:.15rem}
   .event-date .day-range{font-size:1.5rem}
   .event-actions{display:flex;flex-wrap:wrap;gap:1rem}
   .roots{grid-template-columns:2fr 3fr;align-items:start;gap:2rem}
+  .roots-history{grid-column:1 / -1}
+  .tl-split{grid-template-columns:minmax(0,42rem) min(16.5rem,32%);gap:0 1.1rem;align-items:start}
+  .tl-split .tl-prose{max-width:none}
+  .tl-split .history-clip{max-width:none;margin-top:0}
   .muni-flags{padding:.9rem .7rem 2.6rem}
   .muni-flag-list{gap:.8rem .4rem}
   .muni-flag-list li{flex-basis:calc(16.666% - .45rem);max-width:none}
