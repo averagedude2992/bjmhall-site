@@ -129,6 +129,19 @@ section{padding:1.8rem 0}
 .tl-year{display:block;font-weight:800;font-size:1.25rem;color:var(--red-dark)}
 .roots-invite{background:#FFF3C4;border-left:6px solid var(--gold);border-radius:10px;padding:.9rem 1rem}
 
+/* Madeira's 11 municipalities, at the top of Our Roots. No motion. */
+.muni-flags{position:relative;margin:0 0 1.5rem;padding:.8rem .45rem 1.65rem;background:#fff;border-radius:var(--radius);border-top:6px solid var(--gold);box-shadow:var(--shadow)}
+.muni-flags h3{margin-bottom:.7rem}
+.muni-flag-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem .3rem}
+.muni-flag-list li{flex:1 1 calc(33.333% - .4rem);max-width:7.6rem;min-width:0;display:flex;flex-direction:column;align-items:center;text-align:center;position:static;border-radius:8px}
+.muni-flag-list img{height:auto;width:auto;max-height:52px;max-width:100%;border:1px solid #bbb;border-radius:2px;background:#fff}
+.muni-name{display:block;margin-top:.28rem;font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:.78rem;font-weight:700;line-height:1.2;color:var(--green-dark)}
+/* Note sits in the credit line so it stays inside the strip and does not cover the history below. */
+.muni-note{position:absolute;z-index:5;left:.45rem;right:.45rem;bottom:.45rem;width:auto;margin:0;padding:.35rem .55rem;background:var(--green-dark);color:#fff;font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:.78rem;font-weight:600;line-height:1.35;text-align:center;border-radius:8px;box-shadow:var(--shadow);pointer-events:none;opacity:0;visibility:hidden}
+.muni-flag-list li:hover .muni-note,.muni-flag-list li:focus-within .muni-note{opacity:1;visibility:visible}
+.muni-flags:has(li:hover) .muni-credit,.muni-flags:has(li:focus-within) .muni-credit{visibility:hidden}
+.muni-credit{margin:.75rem 0 0;text-align:center;font-size:.8rem}
+
 /* ---------- Hall Details: rates, payment, booking ---------- */
 .rates-card{margin-bottom:1.2rem}
 .rate-list{list-style:none;margin:0 0 1rem;padding:0;display:grid;gap:.7rem}
@@ -271,6 +284,7 @@ h3 .h2-alt{display:block;margin-left:0;margin-top:.15rem}
   .gallery{grid-template-columns:1fr 1fr}
   .hero-extra{display:inline-flex}
   .main-nav a{font-size:1.05rem}
+  .muni-flag-list li{flex-basis:calc(25% - .4rem);max-width:8.2rem}
 }
 
 /* =========== Tablet =========== */
@@ -315,6 +329,9 @@ h3 .h2-alt{display:block;margin-left:0;margin-top:.15rem}
   .event-date .day-range{font-size:1.5rem}
   .event-actions{display:flex;flex-wrap:wrap;gap:1rem}
   .roots{grid-template-columns:2fr 3fr;align-items:start;gap:2rem}
+  .muni-flags{padding:.9rem .7rem .8rem}
+  .muni-flag-list{gap:.8rem .4rem}
+  .muni-flag-list li{flex-basis:calc(16.666% - .45rem);max-width:none}
   .featured-event:has(.featured-img){display:grid;grid-template-columns:minmax(260px,40%) 1fr}
   .featured-event:has(.featured-img) .featured-tag{grid-column:1/-1}
   .map-embed iframe{height:420px}
@@ -331,5 +348,9 @@ h3 .h2-alt{display:block;margin-left:0;margin-top:.15rem}
   .hero{padding:3rem 0 3.4rem}
   .hero h1{font-size:2.8rem}
   .grounds-list{grid-template-columns:1fr 1fr 1fr}
+  .muni-flag-list{flex-wrap:nowrap;gap:.35rem .25rem}
+  .muni-flag-list li{flex:1 1 0;max-width:none}
+  .muni-flag-list img{max-height:56px}
+  .muni-name{font-size:.72rem}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
